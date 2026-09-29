@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Football Hub - Football Fixtures, Results, Teams & Players</title>
+<meta name="description" content="Football Hub for football fixtures, match results, teams, players and football updates.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">⚽ Football Hub</div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="fixtures.html">Fixtures</a>
+    <a href="results.html">Results</a>
+    <a href="teams.html">Teams</a>
+    <a href="players.html" class="nav-button">Players</a>
+    <button id="themeButton" onclick="toggleTheme()">🌙 Dark Mode</button>
+</nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+    <div class="hero-content">
+        <p class="hero-small">WELCOME TO</p>
+
+        <h2>THE ULTIMATE<br>FOOTBALL HUB</h2>
+
+        <p>
+            Fixtures • Results • Teams • Players
+        </p>
+
+        <button onclick="showMessage()">Explore Football</button>
+
+        <p id="message"></p>
+    </div>
+
+</section>
+
+<section class="team-search">
+    <h2>🔎 Search Football Team</h2>
+
+    <input type="text" id="teamInput" placeholder="Enter team name...">
+
+    <button onclick="searchTeam()">Search</button>
+
+    <p id="teamResult"></p>
+</section>
+<!-- Player Search -->
+<section class="player-search">
+
+    <h2>🔎 Search Football Player</h2>
+
+    <input
+        type="text"
+        id="playerInput"
+        placeholder="Enter player name..."
+    >
+
+    <button onclick="searchPlayer()">Search</button>
+
+    <p id="playerResult"></p>
+
+</section>
+<section class="teams">
+    <h2>⚽ Popular Football Teams</h2>
+
+    <div class="team-container">
+
+        <div class="team-card">
+            <div class="team-logo">⚪</div>
+            <h3>Real Madrid</h3>
+            <p>Spain 🇪🇸</p>
+            <button onclick="showTeam('Real Madrid')">View Team</button>
+        </div>
+
+        <div class="team-card">
+            <div class="team-logo">🔵🔴</div>
+            <h3>Barcelona</h3>
+            <p>Spain 🇪🇸</p>
+            <button onclick="showTeam('Barcelona')">View Team</button>
+        </div>
+
+        <div class="team-card">
+            <div class="team-logo">🔵</div>
+            <h3>Manchester City</h3>
+            <p>England 🏴</p>
+            <button onclick="showTeam('Manchester City')">View Team</button>
+        </div>
+
+        <div class="team-card">
+            <div class="team-logo">🔴</div>
+            <h3>Liverpool</h3>
+            <p>England 🏴</p>
+            <button onclick="showTeam('Liverpool')">View Team</button>
+        </div>
+
+    </div>
+
+    <p id="selectedTeam"></p>
+</section>
+    <!-- Main Sections -->
+    <main>
+
+        <h2>Football Hub</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📅</div>
+                <h3>Fixtures</h3>
+                <p>Check upcoming football matches.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏆</div>
+                <h3>Results</h3>
+                <p>See the latest match results.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Tables</h3>
+                <p>Check league standings and points.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👤</div>
+                <h3>Players</h3>
+                <p>Explore player statistics.</p>
+            </div>
+
+        </div>
+<!-- Match Center -->
+
+<section class="match-center">
+
+    <h2>⚽ Match Center</h2>
+
+    <div class="matches">
+
+        <div class="match-card">
+            <span class="status">FT</span>
+
+            <h3>Real Madrid</h3>
+            <div class="score">3 - 1</div>
+            <h3>Barcelona</h3>
+        </div>
+
+
+        <div class="match-card">
+            <span class="status upcoming">UPCOMING</span>
+
+            <h3>Manchester City</h3>
+            <div class="time">20:00</div>
+            <h3>Arsenal</h3>
+        </div>
+
+
+        <div class="match-card">
+            <span class="status">FT</span>
+
+            <h3>PSG</h3>
+            <div class="score">2 - 2</div>
+            <h3>Inter Milan</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Featured Matches -->
+<section class="featured">
+    <h2>🔥 Featured Matches</h2>
+
+    <div class="matches">
+
+        <div class="match-card">
+            <span class="status">UPCOMING</span>
+            <h3>Real Madrid</h3>
+            <div class="time">20:00</div>
+            <h3>Barcelona</h3>
+            <p>La Liga</p>
+        </div>
+
+        <div class="match-card">
+            <span class="status">UPCOMING</span>
+            <h3>Manchester City</h3>
+            <div class="time">18:30</div>
+            <h3>Arsenal</h3>
+            <p>Premier League</p>
+        </div>
+
+        <div class="match-card">
+            <span class="status">UPCOMING</span>
+            <h3>PSG</h3>
+            <div class="time">21:00</div>
+            <h3>Marseille</h3>
+            <p>Ligue 1</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Top Leagues -->
+<section class="leagues">
+    <h2>🏆 Top Football Leagues</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🇬🇧</div>
+            <h3>Premier League</h3>
+            <p>England</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🇪🇸</div>
+            <h3>La Liga</h3>
+            <p>Spain</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🇮🇹</div>
+            <h3>Serie A</h3>
+            <p>Italy</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🇩🇪</div>
+            <h3>Bundesliga</h3>
+            <p>Germany</p>
+        </div>
+
+    </div>
+</section>
+<!-- Latest Football News -->
+<section class="news">
+    <h2>📰 Latest Football News</h2>
+
+    <div class="news-container">
+
+        <div class="news-card">
+            <div class="news-image">⚽</div>
+            <div class="news-content">
+                <span>FOOTBALL</span>
+                <h3>Big Match Ahead</h3>
+                <p>Football fans are ready for another exciting match.</p>
+                <button onclick="readNews('Big Match Ahead')">Read More</button>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="news-image">🏆</div>
+            <div class="news-content">
+                <span>LEAGUE</span>
+                <h3>League Race Heats Up</h3>
+                <p>Top teams continue their battle for the league title.</p>
+                <button onclick="readNews('League Race Heats Up')">Read More</button>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="news-image">⭐</div>
+            <div class="news-content">
+                <span>PLAYERS</span>
+                <h3>Star Players in Focus</h3>
+                <p>Football stars prepare for another important week.</p>
+                <button onclick="readNews('Star Players in Focus')">Read More</button>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="newsMessage"></p>
+</section>
+
+<!-- League Table -->
+
+<section class="league-table">
+
+    <h2>🏆 Premier League Table</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Arsenal</td>
+                <td>10</td>
+                <td>8</td>
+                <td>1</td>
+                <td>1</td>
+                <td><b>25</b></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Manchester City</td>
+                <td>10</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td><b>23</b></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Liverpool</td>
+                <td>10</td>
+                <td>6</td>
+                <td>3</td>
+                <td>1</td>
+                <td><b>21</b></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Chelsea</td>
+                <td>10</td>
+                <td>6</td>
+                <td>1</td>
+                <td>3</td>
+                <td><b>19</b></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Manchester United</td>
+                <td>10</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td><b>17</b></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+    </main>
+
+<!-- Fan Updates -->
+<section class="fan-updates">
+
+    <div class="fan-box">
+
+        <h2>⚽ Join Football Hub</h2>
+
+        <p>
+            Get football updates, fixtures and results.
+        </p>
+
+        <div class="subscribe-box">
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribeFan()">
+                Subscribe
+            </button>
+        </div>
+
+        <p id="subscribeMessage"></p>
+
+    </div>
+
+</section>
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Football Hub | Made with ⚽</p>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

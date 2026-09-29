@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Hub - Teams</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ Football Hub</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fixtures.html">Fixtures</a>
+        <a href="results.html">Results</a>
+        <a href="teams.html">Teams</a>
+        <a href="players.html">Players</a>
+    </nav>
+</header>
+
+
+<section class="teams-page">
+
+    <div class="teams-hero">
+        <p>EXPLORE THE WORLD OF</p>
+        <h2>⚽ FOOTBALL TEAMS</h2>
+        <span>Discover popular clubs from around the world</span>
+    </div>
+
+
+    <div class="team-search">
+
+        <h2>🔎 Search Football Team</h2>
+
+        <input
+            type="text"
+            id="teamPageInput"
+            placeholder="Enter team name..."
+        >
+
+        <button onclick="searchTeamPage()">Search</button>
+
+        <p id="teamPageResult"></p>
+
+    </div>
+
+
+    <section class="popular-teams">
+
+        <h2>🔥 Popular Teams</h2>
+
+        <div class="professional-team-container">
+
+
+            <!-- Real Madrid -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">⚪</div>
+
+                <span class="team-country">🇪🇸 SPAIN</span>
+
+                <h3>Real Madrid</h3>
+
+                <p>La Liga</p>
+
+                <button onclick="showTeamPage('Real Madrid')">
+                    View Team
+                </button>
+
+            </div>
+
+
+            <!-- Barcelona -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">🔵🔴</div>
+
+                <span class="team-country">🇪🇸 SPAIN</span>
+
+                <h3>Barcelona</h3>
+
+                <p>La Liga</p>
+
+                <button onclick="showTeamPage('Barcelona')">
+                    View Team
+                </button>
+
+            </div>
+
+
+            <!-- Manchester City -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">🔵</div>
+
+                <span class="team-country">🏴 ENGLAND</span>
+
+                <h3>Manchester City</h3>
+
+                <p>Premier League</p>
+
+                <button onclick="showTeamPage('Manchester City')">
+                    View Team
+                </button>
+
+            </div>
+
+
+            <!-- Liverpool -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">🔴</div>
+
+                <span class="team-country">🏴 ENGLAND</span>
+
+                <h3>Liverpool</h3>
+
+                <p>Premier League</p>
+
+                <button onclick="showTeamPage('Liverpool')">
+                    View Team
+                </button>
+
+            </div>
+
+
+            <!-- Arsenal -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">🔴⚪</div>
+
+                <span class="team-country">🏴 ENGLAND</span>
+
+                <h3>Arsenal</h3>
+
+                <p>Premier League</p>
+
+                <button onclick="showTeamPage('Arsenal')">
+                    View Team
+                </button>
+
+            </div>
+
+
+            <!-- PSG -->
+            <div class="professional-team-card">
+
+                <div class="big-team-logo">🔵🔴</div>
+
+                <span class="team-country">🇫🇷 FRANCE</span>
+
+                <h3>PSG</h3>
+
+                <p>Ligue 1</p>
+
+                <button onclick="showTeamPage('PSG')">
+                    View Team
+                </button>
+
+            </div>
+
+        </div>
+
+        <p id="selectedTeamPage"></p>
+
+    </section>
+
+</section>
+
+
+<footer>
+    <p>⚽ Football Hub © 2026</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

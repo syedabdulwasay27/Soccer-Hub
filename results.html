@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Hub - Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ Football Hub</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fixtures.html">Fixtures</a>
+        <a href="results.html">Results</a>
+        <a href="teams.html">Teams</a>
+        <a href="players.html">Players</a>
+    </nav>
+</header>
+
+
+<section class="results-page">
+
+    <div class="results-hero">
+        <p>RECENT FOOTBALL</p>
+        <h2>🏆 RESULTS</h2>
+        <span>Check recent match scores and results</span>
+    </div>
+
+
+    <section class="result-list">
+
+        <h2>🔥 Latest Results</h2>
+
+        <div class="professional-result-container">
+
+
+            <!-- Real Madrid vs Barcelona -->
+            <div class="professional-result-card">
+
+                <span class="result-league">🇪🇸 LA LIGA</span>
+
+                <p class="result-status">FULL TIME</p>
+
+                <div class="result-teams">
+
+                    <div>
+                        <strong>Real Madrid</strong>
+                        <span>⚪</span>
+                    </div>
+
+                    <div class="result-score">
+                        <b>3 - 1</b>
+                    </div>
+
+                    <div>
+                        <span>🔵🔴</span>
+                        <strong>Barcelona</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showResult('Real Madrid 3 - 1 Barcelona')">
+                    Match Details
+                </button>
+
+            </div>
+
+
+            <!-- Manchester City vs Arsenal -->
+            <div class="professional-result-card">
+
+                <span class="result-league">🏴 PREMIER LEAGUE</span>
+
+                <p class="result-status">FULL TIME</p>
+
+                <div class="result-teams">
+
+                    <div>
+                        <strong>Manchester City</strong>
+                        <span>🔵</span>
+                    </div>
+
+                    <div class="result-score">
+                        <b>2 - 2</b>
+                    </div>
+
+                    <div>
+                        <span>🔴</span>
+                        <strong>Arsenal</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showResult('Manchester City 2 - 2 Arsenal')">
+                    Match Details
+                </button>
+
+            </div>
+
+
+            <!-- PSG vs Marseille -->
+            <div class="professional-result-card">
+
+                <span class="result-league">🇫🇷 LIGUE 1</span>
+
+                <p class="result-status">FULL TIME</p>
+
+                <div class="result-teams">
+
+                    <div>
+                        <strong>PSG</strong>
+                        <span>🔵🔴</span>
+                    </div>
+
+                    <div class="result-score">
+                        <b>4 - 0</b>
+                    </div>
+
+                    <div>
+                        <span>⚪</span>
+                        <strong>Marseille</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showResult('PSG 4 - 0 Marseille')">
+                    Match Details
+                </button>
+
+            </div>
+
+
+            <!-- Liverpool vs Chelsea -->
+            <div class="professional-result-card">
+
+                <span class="result-league">🏴 PREMIER LEAGUE</span>
+
+                <p class="result-status">FULL TIME</p>
+
+                <div class="result-teams">
+
+                    <div>
+                        <strong>Liverpool</strong>
+                        <span>🔴</span>
+                    </div>
+
+                    <div class="result-score">
+                        <b>2 - 1</b>
+                    </div>
+
+                    <div>
+                        <span>🔵</span>
+                        <strong>Chelsea</strong>
+                    </div>
+
+                </div>
+
+                <button onclick="showResult('Liverpool 2 - 1 Chelsea')">
+                    Match Details
+                </button>
+
+            </div>
+
+        </div>
+
+        <p id="resultMessage"></p>
+
+    </section>
+
+</section>
+
+
+<footer>
+    <p>⚽ Football Hub © 2026</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
